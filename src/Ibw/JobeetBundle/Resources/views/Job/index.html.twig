@@ -1,0 +1,26 @@
+{% extends 'IbwJobeetBundle::layout.html.twig' %}
+{% block content %}
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+   {% for category in categories %}
+  <div class="panel-heading">
+  
+<a href="{{ path('IbwJobeetBundle_category', { 'slug': category.slug }) }}">{{ category.name }}</a><a href="{{ path('IbwJobeetBundle_category', { 'slug': category.slug, '_format': 'atom' }) }}" style="float:right">RSS Feeds</a>
+</div>
+
+<p>
+ {{ include ('IbwJobeetBundle:Job:list.html.twig', {'jobs': category.activejobs}) }}</p></div>
+               {% if category.morejobs %}
+                    <p class="text-right">
+                        and <a href="{{ path('IbwJobeetBundle_category', { 'slug': category.slug }) }}" >{{ category.morejobs }}</a>
+                        more...
+                    </p>
+                {% endif %}
+            
+        {% endfor %}
+    
+
+
+
+
+{% endblock %}

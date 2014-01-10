@@ -1,0 +1,14 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_driver: pdo_mysql
+    database_host: localhost
+    database_port: null
+    database_name: 8_to_5
+    database_user: root
+    database_password: null
+    mailer_transport: gmail
+    mailer_host: ~
+    mailer_user: 8to5jobs@gmail.com	
+    mailer_password: test1234+
+    locale: en
+    secret: ThisTokenIsNotSoSecretChangeIt

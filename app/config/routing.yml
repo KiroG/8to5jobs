@@ -1,0 +1,14 @@
+ibw_jobeet:
+    resource: "@IbwJobeetBundle/Resources/config/routing.yml"
+    prefix:   /
+IbwJobeetBundle_ibw_job:
+        resource: "@IbwJobeetBundle/Resources/config/routing/job.yml"
+        prefix:   /ibw_job
+admin:
+    resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
+    prefix: /admin
+ 
+_sonata_admin:
+    resource: .
+    type: sonata_admin
+    prefix: /admin
